@@ -7,24 +7,30 @@ namespace Course
     {
         static void Main(string[] args)
         {
-            Pessoa a, b;
+            Funcionario a, b;
 
-            a = new Pessoa();
-            b = new Pessoa();
+            a = new Funcionario();
+            b = new Funcionario();
 
-            Console.WriteLine("Dados da primeira pessoa:");
+            Console.WriteLine("Dados do primeiro funcionário:");
             Console.Write("Nome: ");
             a.Name = Console.ReadLine();
-            Console.Write("Idade: ");
-            a.Age = int.Parse(Console.ReadLine());
-            Console.WriteLine("Dados da segunda pessoa:");
+            Console.Write("Salário: ");
+            a.Salary = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.WriteLine("Dados do segundo funcionário:");
             Console.Write("Nome: ");
             b.Name = Console.ReadLine();
-            Console.Write("Idade: ");
-            b.Age = int.Parse(Console.ReadLine());
+            Console.Write("Salário: ");
+            b.Salary = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-            if (a.Age > b.Age) Console.WriteLine($"Pessoa mais velha: {a.Name}");
-            else Console.WriteLine($"Pessoa mais velha: {b.Name}");
+            double media = calcMedia(a.Salary, b.Salary);
+
+            Console.WriteLine($"Salario médio: {media} ");
+        }
+
+        static double calcMedia(double salaryA, double salaryB)
+        {
+            return (salaryA + salaryB) / 2.0 ;
         }
     }
 }
