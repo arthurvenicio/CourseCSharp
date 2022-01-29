@@ -21,11 +21,9 @@ namespace Course
             this._balance = 0.00;
         }
 
-        public Account(int number, string owner, double value)
+        public Account(int number, string owner, double value) : this (number, owner)
         {
-            this.Number = number;
-            this.Owner = owner;
-            this._balance = value;
+          this.AddBalance(value);
         }
 
         public double Balance
