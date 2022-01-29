@@ -5,7 +5,6 @@ C:\Users\arthur.souza\source\temp\Course\Course\bin\Debug\net5.0\Course.runtimec
 C:\Users\arthur.souza\source\temp\Course\Course\bin\Debug\net5.0\Course.dll
 C:\Users\arthur.souza\source\temp\Course\Course\bin\Debug\net5.0\ref\Course.dll
 C:\Users\arthur.souza\source\temp\Course\Course\bin\Debug\net5.0\Course.pdb
-C:\Users\arthur.souza\source\temp\Course\Course\obj\Debug\net5.0\Course.csproj.AssemblyReference.cache
 C:\Users\arthur.souza\source\temp\Course\Course\obj\Debug\net5.0\Course.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\arthur.souza\source\temp\Course\Course\obj\Debug\net5.0\Course.AssemblyInfoInputs.cache
 C:\Users\arthur.souza\source\temp\Course\Course\obj\Debug\net5.0\Course.AssemblyInfo.cs
