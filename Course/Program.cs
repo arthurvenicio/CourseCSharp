@@ -9,48 +9,54 @@ namespace Course
         static void Main(string[] args)
         {
 
-            Console.Write("How many employees will be registered? ");
-            int n  = int.Parse(Console.ReadLine());
+            string[] values = Console.ReadLine().Split(' ');
 
-            List<Employee> employyers = new List<Employee>();
+            int m = int.Parse(values[0]);
+            int n = int.Parse(values[1]);
 
-            for(int i = 1; i <= n; i++)
+            int[,] matriz = new int[m, n];
+
+            for (int i = 0; i < m; i++)
             {
-                Console.WriteLine("Employee #" + i + ":");
-                Console.Write("Id: ");
-                int id = int.Parse(Console.ReadLine());
-                Console.Write("Name: ");
-                string name = Console.ReadLine();
-                Console.Write("Salary: ");
-                double salary = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-                employyers.Add(new Employee(id, name, salary));
-                Console.WriteLine();
+                string[] value = Console.ReadLine().Split(' ');
+                for (int j = 0; j < n; j++)
+                {
+                    matriz[i, j] = int.Parse(value[j]);
+                }
             }
 
-            Console.Write("Enter the employee id that will have salary increase : ");
-            int searchId = int.Parse(Console.ReadLine());
+            Console.WriteLine("Please enter a number that is contained in the matrix: ");
+            int n1 =  int.Parse(Console.ReadLine());
 
-            Employee emp = employyers.Find(e => e.Id == searchId);
-
-            if(emp != null)
+            for (int i = 0; i < m; i++)
             {
-                Console.Write("Enter the percentage: ");
-                double percentage = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
-                emp.IncreaseSalary(percentage);
-            }
-            else
-            {
-                Console.WriteLine("This id does not exist!");
-            }
+                for (int j = 0; j < n; j++)
+                {
+                    if(matriz[i, j] == n1)
+                    {
+                        Console.WriteLine($"Position {i},{j}:");
 
-            Console.WriteLine();
-            Console.WriteLine("Updated list of employees:");
-            foreach (Employee obj in employyers)
-            {
-                Console.WriteLine($"{obj.Name}, Salary: {obj.Salary}");
+                        if(j > 0)
+                        {
+                            Console.WriteLine($"Left: {matriz[i, j - 1]}");
+                        }
+
+                        if (i > 0)
+                        {
+                            Console.WriteLine($"Left: {matriz[i - 1, j]}");
+                        }
+
+                        if (j < n - 1)
+                        {
+                            Console.WriteLine("Right: " + mat[i, j + 1]);
+                        }
+                        if (i < m - 1)
+                        {
+                            Console.WriteLine("Down: " + mat[i + 1, j]);
+                        }
+                    }
+                }
             }
-
-
         }
 
     }
