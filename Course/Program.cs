@@ -48,11 +48,11 @@ namespace Course
 
                         if (j < n - 1)
                         {
-                            Console.WriteLine("Right: " + mat[i, j + 1]);
+                            Console.WriteLine("Right: " + matriz[i, j + 1]);
                         }
                         if (i < m - 1)
                         {
-                            Console.WriteLine("Down: " + mat[i + 1, j]);
+                            Console.WriteLine("Down: " + matriz[i + 1, j]);
                         }
                     }
                 }
